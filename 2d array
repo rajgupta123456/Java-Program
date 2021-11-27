@@ -1,0 +1,51 @@
+//Write a program to reverse the elements of a given 2*2 array. Four integer numbers needs to be passed as Command Line arguments.
+
+
+package com.company;
+import java.util.Scanner;
+public class ReverseArray {
+    int arr[][];
+    Scanner s=new Scanner(System.in);
+
+    ReverseArray()
+    {
+        arr=new int[2][2];
+        System.out.println("Input the elements of the 2*2 array ");
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                arr[i][j]=s.nextInt();
+            }
+        }
+    }
+
+    public void print()
+    {
+        System.out.println("The given array is ");
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("The reverse of the array is");
+        for(int x=1;x>=0;x--)
+        {
+            for(int y=1;y>=0;y--)
+            {
+                System.out.print(arr[x][y]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+class ReverseMain
+{
+    public static void main(String[] args) {
+        ReverseArray obj=new ReverseArray();
+        obj.print();
+    }
+}
